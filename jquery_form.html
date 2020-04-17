@@ -1,0 +1,435 @@
+<!doctype html>
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  
+
+    <!--GOOGLE FONTS-->
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    
+    <!--FONT AWESOME ICONS / FM --> 
+    
+    <script src="https://kit.fontawesome.com/d5fb698d38.js" crossorigin="anonymous"></script>
+    
+    <!--BOOTSTRAP CDN / FM --> 
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    
+    <!-- JQUERY CDN--> 
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+    <!--RESPONSIVE--> 
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Smooth Scroll--> 
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!--JS File-->
+
+  <script src="form.js"></script>
+  
+  <title>RK Group Travel</title>
+  <meta name="description" content="RK Group Travel">
+  <meta name="author" content="SitePoint">
+    
+    <!-- CSS --> 
+  <link rel="stylesheet" href="form.css"> 
+    
+    <style> 
+    
+    table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+    
+    </style>
+    
+
+
+</head>
+
+
+<body> 
+    <!----------NO BACK-END DATABASE REQUIRED, use .txt file to pull pre-made data via AJAX------> 
+    
+
+<header>   
+    
+     <nav>
+        <a href="#"> HOME  </a>
+        <a href="#details"> DETAILS</a>
+        <a href="#AIButton"> ALL INCLUSIVE</a>
+        <a href="#arountheworld"> AROUND THE WORLD</a>
+        <a href="#SQButton"> STUDENT DISCOUNTS</a>
+        <a href="#"> CONTACT </a>
+        <a href="#about"> ABOUT  </a>  
+    
+    </nav>
+    <span style="opacity: 0.9; color:black;"><h1> RK Travel Group</h1></span>
+    <h2> Levels above .. </h2> 
+        <p> Call us from 9AM-6PM Mon-Fri, 12pm-4pm Sat/Sun </p>
+    <span style="font: 10px; text-decoration: none;"> 10 years experience on handling exclusive travel packages</span>
+        <p> Alternatively, you can email us on rkgrouptravel@gmail.com <br> 
+          for complete in depth layout of your holiday packge </p> 
+
+    <!--Retrieve Info Button-->
+     <button id="header_ID" type="button" 
+    class="btn btn-outline-primary">Enter ID</button>
+
+ </header> 
+    
+<main> 
+
+  <!-- Reference Number Slot Below-->
+    
+<!-- FORM x JSON x Jquery --> 
+
+<form style="font-size: 20px;" id="details"> 
+    <h2>  To reveal full details of your booked holiday package, <br> please enter your <span style="opacity: 0.5; font-size: 25; font-family:monospace;"> 10-digit</span> booking reference number below e.g. <span style="opacity: 0.5;"> 1023564859</span> </h2><br> 
+    
+    <!-- ID -->
+    
+    Customer ID: <br>
+    <input id="ID" title="need your ID" class="tool" type="number" placeholder="Enter your customer ID" name="ID" data-toggle="tooltip" 
+    data-placement="bottom" pattern="[0-10] {10}" required> <br> 
+    
+    
+    <!-- ID Button --> 
+        <!-- If I change the 'type=submit' HTML5 form validation activates, but onclick removes details and goes back to the top of the page--> 
+    
+    <button type="button" id="IDField" style="margin: 5% 30%;"  class="btn btn-primary">Retrieve Information</button>    
+
+    
+    First Name: <br>
+    <input type="text" placeholder="Ryan" name="firstName" id="firstNameField"> <br>
+    Last Name: <br>
+    <input type="text" placeholder="Kearney"name="lastName" id="lastNameField"> <br>
+    Gender: <br>
+    <input type="text" placeholder="Male/Female/Other" name="lastName" id="genderField"> <br>
+    Title: <br>
+    <input type="text" placeholder="Mr,Mrs,Miss" name="title" id="titleField"> <br>
+    Address: <br>
+    <input type="text" placeholder="56 Drama Road" name="address" id="addressField"> <br>
+    Town: <br>
+    <input type="text" placeholder="Holywood" name="town" id="townField"> <br>
+    Booking Date: <br>
+    <input type="text" placeholder="dd/mm/yy" name="bookingdate" id="bookingdateField"> <br>
+    Departure Date: <br>
+    <input type="text" placeholder="dd/mm/yy" name="departuredate" id="departureField"> <br>
+    Location: <br>
+    <input type="text" placeholder="France" name="holidayPackage" id="locationField"> <br>
+    City: <br>
+    <input type="text" placeholder="Paris" name="hotelQuality" id="cityField"> <br>
+    E-mail: <br>
+    <input type="text" placeholder="ryank456@gmail.com" name="email" id="emailField"> <br>
+    Creditcard: <br>
+    <input type="number" placeholder="xxxx-xxxx-xxxx-xxxx" name="airline" id="creditcardField"> <br>
+
+    
+    <!--UPDATE BUTTON--> 
+    
+    <button type="button" id="updateField" class="btn btn-primary">Update Details</button> 
+    
+    <br> <br> 
+    </form>
+ 
+
+
+ <!-- Company Feature-->
+<section class="info_sec" alt="Tropical image with destination and their signs on a cocunut tree" style="background-image: url(img/deanna-ritchie-wORTURlz7jg-unsplash.jpg);">
+   <p> <i class="fas fa-globe-europe fa-3x"></i> <br>  Worldwide Experts   </p>
+    <p> <i class="fas fa-money-check-alt fa-3x"></i> <br> Competitive Pricing </p>
+    <p> <i class="fas fa-suitcase-rolling fa-3x"></i> <br> Exclusive Deals </p>
+    <p> <i class="fas fa-people-carry fa-3x"></i> <br> Dedicated Personnel </p>
+    <br> 
+    <h1> <span style="color: black; font-size: 40px;">#RKTravel </span> Check</h1> 
+</section> 
+    
+<div class="about_us"> 
+   <span style="font-size: 25px; color: #FF9F9C; font-style: oblique;"><h2>RK Travel Group | "Travel Smarter"</h2> </span>
+We are experts on delivering the most competitive and convenient  process of travel packaging in the world. We have built our strong reputation through consistently delivering the best customer experience, and aiming to improve in a day to day basis. We want our customers to experience the most intuitive web experience from registering to fully booking the holiday of their dreams. We have yearly aims regarding our loyal customers, as well as, fulfilling our teams career desires. We are proud to have started this organisation via strong family business foundations. 
+    
+    
+    
+    
+    
+    </div>
+    
+
+
+
+
+
+
+    <!--AROUND THE WORLD-->
+
+<div id="arountheworld">
+    <h1 style="margin-bottom: 5%;;">AROUND THE WORLD</h1>
+      <p> What are you waiting for? Plan and start your journey 
+        <span style="font-size: 25px; text-decoration: underline;">#RK Travel</span> with us, you will be
+      reassured a safe and secured packaged despite any circumstances that you may face before, during and after
+    your holiday. </p>
+
+    <div class="card" style="float: left; width: 33%;">
+        <img src="img/asean.png" class="card-img-top" alt="Flag representing all of the countries within
+        South East Asia">
+        <div class="card-body">
+          <h5 class="card-title">South East Asia</h5>
+          <p class="card-text"> We are in contact within the most demanded and highly valued
+            resorts, hostels and hotels within this region of the world. We'll happily guide 
+            you in tropical locations and friendly community.
+          </p>
+        
+        </div>
+      </div>
+      <div class="card" style="float: left; width: 33%">
+          <img src="img/europe.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Europe</h5>
+            <p class="card-text">Europe offers a wide range of countries that has their very
+              own distinctive vibe and architecture beauty for you to see. This continent is one of the 
+              most sought after journeys within our client base. 
+            </p>
+          
+          </div>
+        </div>
+        <div class="card" style="float: left; width: 33%">
+            <img src="img/southamerica.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">South America</h5>
+              <p class="card-text">South America is home of many tropical locations, which you can visit.
+                The regions love for football also gives you the chance to watch and see all the top stadiums within the countries. 
+              </p>
+            
+            </div>
+          </div>
+                  
+
+
+    
+  </div>
+
+
+
+  
+  <section class="about_rk">   
+
+  <!--ABOUT SECTION-->
+
+    <h1 id="about"> ABOUT</h1>  
+    <br>
+     <p style="padding: 0 10%; text-align: left;"> Being one of the top independent exclusive travel agency comes with specific expertise. 
+       The top two fields we specialise on are Student Travelling and All-inclusive holidays. Over the years,
+       we have learnt to ensure to put the customers experience first. This means, 
+       we prioritise how our clients will travel and what to expect when arriving to the destination.
+       For more information, see below: 
+     </p>
+     <ol>
+       <l><i class="fas fa-medal"></i>2019 Best student agency</l> <br> 
+       <l><i class="fas fa-medal"></i>2018 Independent travel agency platinum award</l> <br> 
+      <l> <i class="fas fa-medal"></i>2016 Top rated and reviewd website in via Tripadvisor</l> <br> 
+     </ol>
+        <div class="about_1"> 
+            <h2> <i class="fas fa-user-graduate"></i> Student Quotes</h2>
+            <br>
+            <p style="padding: 0 4%;" class="studentquotes">RK Travel is proud and have been working with making travelling 
+              easier for todays modern students. With the amount of financial factors
+              scaling up these days, it's important that such exclusive offer is within touching distance. 
+              To being your journey, please contact us. 
+            </p>
+            <button class="btn btn-link" id="SQButton">MORE INFO</button>   
+      </div>
+
+
+
+  <div class="about_2"> 
+      <h2> <i class="fas fa-plane"></i>All Inclusive</h2>
+      <br> 
+       <p style="padding: 0 4%;" class="allinclusive"> We cater and specialise on finding the best value and perks within 
+         All-Inclusive holidays, with thousands of great feedback, we're confident that we'll finding
+         whatever you desire. To begin your journey, please contact us. 
+       </p>
+       <button class="btn btn-link" id="AIButton">MORE INFO</button>
+        </div> 
+
+        
+
+
+  </section>
+
+
+  <!--SOCIAL INFO ETC--> <!--REF:Bootstrap/Footer-->
+
+ <!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Our Promise</h5>
+        <p>Our vision is to consistently deliver and to never stop improving our
+          services. 
+        </p>
+        <p>We continue to grow as a company and enjoy doing so,
+          with the company heavily values its staff and loyal customers. 
+          We are proud to to be able to deliver peoples most desired holiday
+          dreams. 
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <a href="#arountheworld">DESTINATIONS</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#!">CONTACT</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#header_ID">HOLIDAY DETAILS</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#about">AWARDS</a>
+            </p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Contact details -->
+        <h5 class="font-weight-bold text-uppercase mb-4"> 23 Warehouse, Belfast</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <i class="fas fa-home mr-3"></i> Belfast City Centre</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-envelope mr-3"></i> rktravelgroup.com</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-phone mr-3"></i> 028 955 22 899</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-print mr-3"></i> 028 977 11 744</p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+        <!-- Social buttons -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+
+        <!-- Facebook -->
+        <a type="button" class="btn-floating btn-fb">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- Twitter -->
+        <a type="button" class="btn-floating btn-tw">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <!-- Google +-->
+        <a type="button" class="btn-floating btn-gplus">
+          <i class="fab fa-google-plus-g"></i>
+        </a>
+        <!-- Dribbble -->
+        <a type="button" class="btn-floating btn-dribbble">
+          <i class="fab fa-dribbble"></i>
+        </a>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="#"> rktravelgroup.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+<!--COOKIES / LOCAL STORAGE-->
+
+<div id="termsandconditions">
+  <p class="mr-2">This website uses local storage, agree to the Terms and Condition</p>
+  <button id="acceptBtn" class="btn btn-primary">Accept</button>
+</div>
+<!-- Footer -->
+
+
+
+  <!--CONTACT SECTION-->
+    
+
+
+    
+    
+    
+    </main> 
+    
+
+
+
+    
+
+
+</body>
+</html>
